@@ -9,6 +9,7 @@ function BooksPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredBooks, setFilteredBooks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [sortOption, setSortOption] = useState("none");
   const { user } = useContext(AuthContext);
 
   if (!user?.email) {
@@ -33,15 +34,25 @@ function BooksPage() {
     fetchBooks();
   }, []);
 
+  // Sort and filter books
   useEffect(() => {
-    if (!searchTerm.trim()) {
-      setFilteredBooks(books);
-    } else {
+    let result = [...books];
+    
+    // Apply search filter
+    if (searchTerm.trim()) {
       const lowercased = searchTerm.toLowerCase();
-      const filtered = books.filter((book) => book.name.toLowerCase().includes(lowercased));
-      setFilteredBooks(filtered);
+      result = result.filter((book) => 
+        book.name.toLowerCase().includes(lowercased)
+      );
     }
-  }, [searchTerm, books]);
+    
+    // Apply sorting
+    if (sortOption === "alphabetical") {
+      result.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    
+    setFilteredBooks(result);
+  }, [searchTerm, books, sortOption]);
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 min-h-screen pt-20 pb-16">
@@ -63,7 +74,7 @@ function BooksPage() {
 
         {/* Search Section */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-10">
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto space-y-4">
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Search size={20} className="text-gray-400" />
@@ -78,6 +89,20 @@ function BooksPage() {
                           focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent 
                           transition-all duration-200"
               />
+            </div>
+            
+            <div className="flex justify-end">
+              <select
+                value={sortOption}
+                onChange={(e) => setSortOption(e.target.value)}
+                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg 
+                         bg-white dark:bg-gray-700 text-gray-900 dark:text-white
+                         focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent 
+                         transition-all duration-200 cursor-pointer"
+              >
+                <option value="none">Sort</option>
+                <option value="alphabetical">A to Z</option>
+              </select>
             </div>
           </div>
         </div>
