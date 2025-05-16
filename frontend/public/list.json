@@ -1,0 +1,91 @@
+[
+    {
+        "id": 1,
+        "name": "GOT book",
+        "title": "Game of Thrones",
+        "price": 29.99,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/vintage-books-with-paper-scroll-feather-ink-pot-colored-sketch-decorative-concept-vector-illustration_1284-2997.jpg?t=st=1745235928~exp=1745239528~hmac=d8abe823c3518f7a1cde54e82e942521fefb0d5cd3635067fdf018ff83959f65&w=900"
+    },
+
+    {
+        "id": 2,
+        "name": "Harry Potter",
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "price": 19.99,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/vintage-books-with-paper-scroll-feather-ink-pot-colored-sketch-decorative-concept-vector-illustration_1284-2997.jpg?t=st=1745235928~exp=1745239528~hmac=d8abe823c3518f7a1cde54e82e942521fefb0d5cd3635067fdf018ff83959f65&w=900"
+    },
+    {
+        "id": 3,
+        "name": "The Hobbit",
+        "title": "The Hobbit",
+        "price": 24.99,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/vintage-books-with-paper-scroll-feather-ink-pot-colored-sketch-decorative-concept-vector-illustration_1284-2997.jpg?t=st=1745235928~exp=1745239528~hmac=d8abe823c3518f7a1cde54e82e942521fefb0d5cd3635067fdf018ff83959f65&w=900"
+    },
+    {
+        "id": 4,
+        "name": "1984",
+        "title": "1984",
+        "price": 14.99,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/vintage-books-with-paper-scroll-feather-ink-pot-colored-sketch-decorative-concept-vector-illustration_1284-2997.jpg?t=st=1745235928~exp=1745239528~hmac=d8abe823c3518f7a1cde54e82e942521fefb0d5cd3635067fdf018ff83959f65&w=900"
+    },
+    {
+        "id": 5,
+        "name": "Pride and Prejudice",
+        "title": "Pride and Prejudice",
+        "price": 12.99,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/vintage-books-with-paper-scroll-feather-ink-pot-colored-sketch-decorative-concept-vector-illustration_1284-2997.jpg?t=st=1745235928~exp=1745239528~hmac=d8abe823c3518f7a1cde54e82e942521fefb0d5cd3635067fdf018ff83959f65&w=900"
+    },
+    {
+        "id": 6,
+        "name": "To Kill a Mockingbird",
+        "title": "To Kill a Mockingbird",
+        "price": 18.99,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/vintage-books-with-paper-scroll-feather-ink-pot-colored-sketch-decorative-concept-vector-illustration_1284-2997.jpg?t=st=1745235928~exp=1745239528~hmac=d8abe823c3518f7a1cde54e82e942521fefb0d5cd3635067fdf018ff83959f65&w=900"
+    },
+    {
+        "id": 7,
+        "name": "The Catcher in the Rye",
+        "title": "The Catcher in the Rye",
+        "price": 16.99,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/vintage-books-with-paper-scroll-feather-ink-pot-colored-sketch-decorative-concept-vector-illustration_1284-2997.jpg?t=st=1745235928~exp=1745239528~hmac=d8abe823c3518f7a1cde54e82e942521fefb0d5cd3635067fdf018ff83959f65&w=900"
+    },
+    {
+        "id": 8,
+        "name": "The Great Gatsby",
+        "title": "The Great Gatsby",
+        "price": 21.99,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/vintage-books-with-paper-scroll-feather-ink-pot-colored-sketch-decorative-concept-vector-illustration_1284-2997.jpg?t=st=1745235928~exp=1745239528~hmac=d8abe823c3518f7a1cde54e82e942521fefb0d5cd3635067fdf018ff83959f65&w=900"
+    },
+    {
+        "id": 9,
+        "name": "The Da Vinci Code",
+        "title": "The Da Vinci Code",
+        "price": 19.49,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/vintage-books-with-paper-scroll-feather-ink-pot-colored-sketch-decorative-concept-vector-illustration_1284-2997.jpg?t=st=1745235928~exp=1745239528~hmac=d8abe823c3518f7a1cde54e82e942521fefb0d5cd3635067fdf018ff83959f65&w=900"
+    },
+    {
+        "id": 10,
+        "name": "Moby-Dick",
+        "title": "Moby-Dick",
+        "price": 23.99,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/vintage-books-with-paper-scroll-feather-ink-pot-colored-sketch-decorative-concept-vector-illustration_1284-2997.jpg?t=st=1745235928~exp=1745239528~hmac=d8abe823c3518f7a1cde54e82e942521fefb0d5cd3635067fdf018ff83959f65&w=900"
+    },
+    {
+        "id": 11,
+        "name": "The Alchemist",
+        "title": "The Alchemist",
+        "price": 15.99,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/vintage-books-with-paper-scroll-feather-ink-pot-colored-sketch-decorative-concept-vector-illustration_1284-2997.jpg?t=st=1745235928~exp=1745239528~hmac=d8abe823c3518f7a1cde54e82e942521fefb0d5cd3635067fdf018ff83959f65&w=900"
+    }
+]
