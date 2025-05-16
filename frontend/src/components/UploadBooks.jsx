@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useDarkMode } from './DarkModeProvider';
 
 const UploadBooks = () => {
     const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const UploadBooks = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(false);
+    const { isDarkMode } = useDarkMode();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -37,11 +39,11 @@ const UploadBooks = () => {
     };
 
     return (
-        <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg">
+        <div className={`max-w-lg mx-auto p-6 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'} shadow-md rounded-lg`}>
             <h2 className="text-2xl font-semibold mb-4">Upload New Book</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                    <label className="block text-sm font-medium mb-1" htmlFor="name">Name</label>
+                    <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`} htmlFor="name">Name</label>
                     <input
                         type="text"
                         name="name"
@@ -49,12 +51,16 @@ const UploadBooks = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                        className={`w-full border rounded p-2 focus:outline-none focus:ring-2 ${
+                            isDarkMode 
+                            ? 'bg-gray-700 border-gray-600 text-white focus:ring-pink-400' 
+                            : 'bg-white border-gray-300 focus:ring-pink-200'
+                        }`}
                     />
                 </div>
 
                 <div>
-                    <label className="block text-sm font-medium mb-1" htmlFor="author">Author</label>
+                    <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`} htmlFor="author">Author</label>
                     <input
                         type="text"
                         name="author"
@@ -62,12 +68,16 @@ const UploadBooks = () => {
                         value={formData.author}
                         onChange={handleChange}
                         required
-                        className="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                        className={`w-full border rounded p-2 focus:outline-none focus:ring-2 ${
+                            isDarkMode 
+                            ? 'bg-gray-700 border-gray-600 text-white focus:ring-pink-400' 
+                            : 'bg-white border-gray-300 focus:ring-pink-200'
+                        }`}
                     />
                 </div>
 
                 <div>
-                    <label className="block text-sm font-medium mb-1" htmlFor="image">Image URL</label>
+                    <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`} htmlFor="image">Image URL</label>
                     <input
                         type="url"
                         name="image"
@@ -75,12 +85,16 @@ const UploadBooks = () => {
                         value={formData.image}
                         onChange={handleChange}
                         required
-                        className="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                        className={`w-full border rounded p-2 focus:outline-none focus:ring-2 ${
+                            isDarkMode 
+                            ? 'bg-gray-700 border-gray-600 text-white focus:ring-pink-400' 
+                            : 'bg-white border-gray-300 focus:ring-pink-200'
+                        }`}
                     />
                 </div>
 
                 <div>
-                    <label className="block text-sm font-medium mb-1" htmlFor="pdfLink">PDF Link</label>
+                    <label className={`block text-sm font-medium mb-1 ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`} htmlFor="pdfLink">PDF Link</label>
                     <input
                         type="url"
                         name="pdfLink"
@@ -88,7 +102,11 @@ const UploadBooks = () => {
                         value={formData.pdfLink}
                         onChange={handleChange}
                         required
-                        className="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                        className={`w-full border rounded p-2 focus:outline-none focus:ring-2 ${
+                            isDarkMode 
+                            ? 'bg-gray-700 border-gray-600 text-white focus:ring-pink-400' 
+                            : 'bg-white border-gray-300 focus:ring-pink-200'
+                        }`}
                     />
                 </div>
 
@@ -98,7 +116,7 @@ const UploadBooks = () => {
                 <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-indigo-600 text-white p-2 rounded hover:bg-indigo-700 disabled:opacity-50"
+                    className="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 disabled:opacity-50"
                 >
                     {loading ? 'Uploading...' : 'Upload Book'}
                 </button>

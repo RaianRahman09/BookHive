@@ -17,7 +17,7 @@ function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold tracking-tight hover:text-pink-400 transition-colors duration-200">
-            BookStore
+            BookHive
           </Link>
 
           {/* Mobile menu button - for responsive design */}
